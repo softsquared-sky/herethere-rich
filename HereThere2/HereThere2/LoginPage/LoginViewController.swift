@@ -25,17 +25,19 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         let predicate = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
         return predicate.evaluate(with: passStr)
     }
-    
+    let loginOk : UIImage = UIImage(named:"ic_login_accessed")!
+    let loginnotOk : UIImage = UIImage(named:"ic_login_notaccessed")!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var findBtn: UIButton!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var newCustomer: UIButton!
     
     @IBOutlet weak var logoutbtn: UIButton!
     @IBOutlet weak var loginbtnPushed: UIButton!{
         didSet{
-            loginbtnPushed.isEnabled = true
-            loginbtnPushed.setTitleColor(UIColor.black, for: .normal)
-            
+            loginbtnPushed.isEnabled = false
+            //loginbtnPushed.setTitleColor(UIColor.black, for: .normal)
+            loginbtnPushed.setImage(loginnotOk, for: UIControl.State.normal)
         }
     }
     @IBAction func loginbtnPushed(_ sender: Any) {
@@ -52,7 +54,8 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         }
     }
     @IBAction func newCustomer(_ sender: Any) {
-        self.navigationController!.pushViewController(createUserViewController(), animated: true)
+        //self.navigationController!.pushViewController(createUserViewController(), animated: true)
+        self.navigationController!.pushViewController(newUserViewController(), animated: true)
 
     }
     @IBAction func logoutbtnPushed(_ sender: Any) {
@@ -72,19 +75,42 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if(isValidEmail(emailStr: emailTextField.text!) && validatePassword(passStr: pwTextField.text!)){
             loginbtnPushed.isEnabled = true
-            loginbtnPushed.setTitleColor(UIColor.blue, for: .normal)
+            //loginbtnPushed.setTitleColor(UIColor.blue, for: .normal)
+            loginbtnPushed.setImage(loginOk, for: UIControl.State.normal)
         }else{
             loginbtnPushed.isEnabled = false
-            loginbtnPushed.setTitleColor(UIColor.black, for: .normal)
+            //loginbtnPushed.setTitleColor(UIColor.black, for: .normal)
+            loginbtnPushed.setImage(loginnotOk, for: UIControl.State.normal)
         }
         print(emailTextField.text!,range.location, range.length)
         return true
     }
+    var attrs = [
+        NSAttributedString.Key.font : UIFont.systemFont(ofSize: 12.0),
+        NSAttributedString.Key.foregroundColor : UIColor.white,
+        NSAttributedString.Key.underlineStyle : 1] as [NSAttributedString.Key : Any]
+    
+    var newuserattributedString = NSMutableAttributedString(string:"")
+    var findattributedString = NSMutableAttributedString(string:"")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let swiftColor = UIColor(red: 0/255.0, green: 159/255.0, blue: 229/255.0, alpha: 1.0)
+        view.backgroundColor = swiftColor
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "메일주소@email.com",
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        pwTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호",
+                                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        let newuserbtnTitleStr = NSMutableAttributedString(string:"회원가입", attributes:attrs)
+        let findbtnTitleStr = NSMutableAttributedString(string:"이메일/비밀번호 찾기", attributes:attrs)
+        newuserattributedString.append(newuserbtnTitleStr)
+        findattributedString.append(findbtnTitleStr)
+        
+        newCustomer.setAttributedTitle(newuserattributedString, for: .normal)
+        findBtn.setAttributedTitle(findattributedString, for: .normal)
         logoutbtn.isHidden = true
         loginbtnPushed.isHidden = false
+        //loginbtnPushed.isEnabled = true
         emailTextField.delegate = self
         pwTextField.delegate = self
         if let user = Auth.auth().currentUser{
