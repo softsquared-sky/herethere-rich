@@ -22,5 +22,7 @@ struct ColorPalette {
     static let borderDark: UInt = 0xcfcfcf
     // rgb 237 237 237
     static let borderSoft: UInt = 0xededed
-    
+    // rgb 0 159 229
+    static let swiftColor: UInt = 0x009FE5
+     //let swiftColor = UIColor(red: 0/255.0, green: 159/255.0, blue: 229/255.0, alpha: 1.0)
 }

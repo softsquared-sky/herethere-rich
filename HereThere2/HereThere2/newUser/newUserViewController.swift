@@ -10,6 +10,8 @@ import UIKit
 
 class newUserViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate{
     
+    var Data: String?
+    
     
     var index : Int = 0;
     var indexMin = 0;
@@ -76,12 +78,14 @@ class newUserViewController: UIPageViewController, UIPageViewControllerDataSourc
         
         NSLog("newUserViewController viewControllerAfter index : %d", index)
         
+        
+        //guard 문으로 바꾸기
         if (index == self.identifiers.count-1)
         {
             return nil
         }
         
-       
+        //if( data =  "ok")
          self.index = index + 1
         
         return getViewControllerAtIndex (index: self.index)
@@ -110,23 +114,20 @@ class newUserViewController: UIPageViewController, UIPageViewControllerDataSourc
     func getViewControllerAtIndex(index: NSInteger) -> UIViewController?
     {
         NSLog("newUserViewController getViewControllerAtIndex index : %d", index)
-        
+        let storyboard = UIStoryboard(name: "newUser", bundle: nil)
         if index == 0
         {
-            let storyboard = UIStoryboard(name: "newUser", bundle: nil);
             let emailVC = storyboard.instantiateViewController(withIdentifier: "emailVC")
+            //emailVC.
             return emailVC
         }
         else if index == 1
         {
-            
-            let storyboard = UIStoryboard(name: "newUser", bundle: nil);
             let pwVC = storyboard.instantiateViewController(withIdentifier: "pwVC")
             return pwVC
         }
         else if index == 2
         {
-            let storyboard = UIStoryboard(name: "newUser", bundle: nil);
             let personalVC = storyboard.instantiateViewController(withIdentifier: "personalVC") 
             return personalVC
         }

@@ -10,21 +10,9 @@ import UIKit
 import Firebase
 
 
-class LoginViewController: BaseViewController, UITextFieldDelegate {
+class LoginViewController: BaseViewController {
     
-    func isValidEmail(emailStr:String) -> Bool {
-        
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: emailStr)
-    }
     
-    func validatePassword(passStr:String) -> Bool {
-        let passwordRegEx = "^(?=.*[A-Za-z])(?=.*[0-9]).{6,10}$"
-        let predicate = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
-        return predicate.evaluate(with: passStr)
-    }
     let loginOk : UIImage = UIImage(named:"ic_login_accessed")!
     let loginnotOk : UIImage = UIImage(named:"ic_login_notaccessed")!
     @IBOutlet weak var emailTextField: UITextField!
@@ -55,8 +43,8 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     }
     @IBAction func newCustomer(_ sender: Any) {
         //self.navigationController!.pushViewController(createUserViewController(), animated: true)
-        self.navigationController!.pushViewController(newUserViewController(), animated: true)
-
+        self.navigationController!.pushViewController(NewEmailViewController(), animated: true)
+        
     }
     @IBAction func logoutbtnPushed(_ sender: Any) {
         let firebaseAuth = Auth.auth()
@@ -66,25 +54,13 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
             print ("Error signing out: %@", signOutError)
         }
     }/*
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print(textField.text!,range.location, range.length)
-        return true
-    }
-    */
-   
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if(isValidEmail(emailStr: emailTextField.text!) && validatePassword(passStr: pwTextField.text!)){
-            loginbtnPushed.isEnabled = true
-            //loginbtnPushed.setTitleColor(UIColor.blue, for: .normal)
-            loginbtnPushed.setImage(loginOk, for: UIControl.State.normal)
-        }else{
-            loginbtnPushed.isEnabled = false
-            //loginbtnPushed.setTitleColor(UIColor.black, for: .normal)
-            loginbtnPushed.setImage(loginnotOk, for: UIControl.State.normal)
-        }
-        print(emailTextField.text!,range.location, range.length)
-        return true
-    }
+     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+     print(textField.text!,range.location, range.length)
+     return true
+     }
+     */
+    
+    
     var attrs = [
         NSAttributedString.Key.font : UIFont.systemFont(ofSize: 12.0),
         NSAttributedString.Key.foregroundColor : UIColor.white,
@@ -95,12 +71,19 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let swiftColor = UIColor(red: 0/255.0, green: 159/255.0, blue: 229/255.0, alpha: 1.0)
-        view.backgroundColor = swiftColor
+        
+        //let swiftColor = UIColor(red: 0/255.0, green: 159/255.0, blue: 229/255.0, alpha: 1.0)
+        let testColor = UIColor(hex: ColorPalette.swiftColor, alpha: 1.0)
+        self.navigationController?.navigationBar.barTintColor = testColor
+        view.backgroundColor = testColor
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+        self.navigationController!.navigationBar.tintColor = UIColor.white;
         emailTextField.attributedPlaceholder = NSAttributedString(string: "메일주소@email.com",
-                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        pwTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호",
                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        pwTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호",
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         let newuserbtnTitleStr = NSMutableAttributedString(string:"회원가입", attributes:attrs)
         let findbtnTitleStr = NSMutableAttributedString(string:"이메일/비밀번호 찾기", attributes:attrs)
         newuserattributedString.append(newuserbtnTitleStr)
@@ -122,16 +105,46 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         }
         // Do any additional setup after loading the view.
     }
-
-
+    
+    
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension LoginViewController : UITextFieldDelegate{
+    func isValidEmail(emailStr:String) -> Bool {
+        
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: emailStr)
     }
-    */
-
+    
+    func validatePassword(passStr:String) -> Bool {
+        let passwordRegEx = "^(?=.*[A-Za-z])(?=.*[0-9]).{6,10}$"
+        let predicate = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
+        return predicate.evaluate(with: passStr)
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if(self.isValidEmail(emailStr: self.emailTextField.text!) && self.validatePassword(passStr: self.pwTextField.text!)){
+            loginbtnPushed.isEnabled = true
+            //loginbtnPushed.setTitleColor(UIColor.blue, for: .normal)
+            loginbtnPushed.setImage(loginOk, for: UIControl.State.normal)
+        }else{
+            loginbtnPushed.isEnabled = false
+            //loginbtnPushed.setTitleColor(UIColor.black, for: .normal)
+            loginbtnPushed.setImage(loginnotOk, for: UIControl.State.normal)
+        }
+        print(emailTextField.text!,range.location, range.length)
+        return true
+    }
 }

@@ -54,7 +54,8 @@
                                 </constraints>
                                 <state key="normal" image="ic_okbtn"/>
                                 <connections>
-                                    <action selector="okbtnPushed:" destination="GGT-za-O25" eventType="touchUpInside" id="ULm-mU-ejF"/>
+                                    <action selector="okBtnPushed:" destination="GGT-za-O25" eventType="touchUpInside" id="UzR-7G-Owp"/>
+                                    <segue destination="6jW-7i-me4" kind="show" id="aFm-3I-9ns"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="존재하는 이메일이 아닙니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9T-ZZ-Rvl">
@@ -137,6 +138,10 @@
                                     <constraint firstAttribute="width" constant="140" id="puP-bR-qtZ"/>
                                 </constraints>
                                 <state key="normal" image="ic_okbtn"/>
+                                <connections>
+                                    <action selector="okpwBtnPushed:" destination="6jW-7i-me4" eventType="touchUpInside" id="FAz-vg-0q6"/>
+                                    <segue destination="KuY-wj-urH" kind="show" id="wDT-vc-nhS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

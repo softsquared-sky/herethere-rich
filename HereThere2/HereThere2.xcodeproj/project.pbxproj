@@ -32,12 +32,21 @@
 		4A3BA5BB2312F04300235F33 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3BA5B92312F04300235F33 /* LoginViewController.xib */; };
 		4A3BA5BF2312FA0D00235F33 /* createUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BA5BD2312FA0D00235F33 /* createUserViewController.swift */; };
 		4A3BA5C02312FA0D00235F33 /* createUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3BA5BE2312FA0D00235F33 /* createUserViewController.xib */; };
+		4A771C3023159E38003AD399 /* SchoolOkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A771C2E23159E38003AD399 /* SchoolOkViewController.swift */; };
+		4A771C3123159E38003AD399 /* SchoolOkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A771C2F23159E38003AD399 /* SchoolOkViewController.xib */; };
+		4A771C3423159E53003AD399 /* SNationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A771C3223159E53003AD399 /* SNationViewController.swift */; };
+		4A771C3523159E53003AD399 /* SNationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A771C3323159E53003AD399 /* SNationViewController.xib */; };
 		4A833E612314194100A1BAB6 /* SendDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A833E602314194100A1BAB6 /* SendDataDelegate.swift */; };
+		4A833E692315775300A1BAB6 /* NewEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A833E672315775300A1BAB6 /* NewEmailViewController.swift */; };
+		4A833E6A2315775300A1BAB6 /* NewEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A833E682315775300A1BAB6 /* NewEmailViewController.xib */; };
+		4A833E6D23157B0700A1BAB6 /* NewPwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A833E6B23157B0700A1BAB6 /* NewPwViewController.swift */; };
+		4A833E6E23157B0700A1BAB6 /* NewPwViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A833E6C23157B0700A1BAB6 /* NewPwViewController.xib */; };
+		4A833E7123157BE800A1BAB6 /* NewPersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A833E6F23157BE800A1BAB6 /* NewPersonalViewController.swift */; };
+		4A833E7223157BE800A1BAB6 /* NewPersonalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A833E7023157BE800A1BAB6 /* NewPersonalViewController.xib */; };
+		4A833E7623158B7400A1BAB6 /* SchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A833E7423158B7400A1BAB6 /* SchoolViewController.swift */; };
+		4A833E7723158B7400A1BAB6 /* SchoolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A833E7523158B7400A1BAB6 /* SchoolViewController.xib */; };
 		4ABFDE2F2313E0D4005BD649 /* newUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABFDE2E2313E0D4005BD649 /* newUser.storyboard */; };
 		4ABFDE312313E16E005BD649 /* newUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABFDE302313E16E005BD649 /* newUserViewController.swift */; };
-		4ABFDE39231403A6005BD649 /* emailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABFDE38231403A6005BD649 /* emailViewController.swift */; };
-		4ABFDE3B23140478005BD649 /* pwViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABFDE3A23140478005BD649 /* pwViewController.swift */; };
-		4ABFDE3D23140492005BD649 /* personalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABFDE3C23140492005BD649 /* personalViewController.swift */; };
 		9C2560EB72890EFACF492924 /* Pods_HereThere2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B15649EA5527554E9DB2BD9 /* Pods_HereThere2.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,12 +78,21 @@
 		4A3BA5B92312F04300235F33 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		4A3BA5BD2312FA0D00235F33 /* createUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createUserViewController.swift; sourceTree = "<group>"; };
 		4A3BA5BE2312FA0D00235F33 /* createUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = createUserViewController.xib; sourceTree = "<group>"; };
+		4A771C2E23159E38003AD399 /* SchoolOkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolOkViewController.swift; sourceTree = "<group>"; };
+		4A771C2F23159E38003AD399 /* SchoolOkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolOkViewController.xib; sourceTree = "<group>"; };
+		4A771C3223159E53003AD399 /* SNationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNationViewController.swift; sourceTree = "<group>"; };
+		4A771C3323159E53003AD399 /* SNationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SNationViewController.xib; sourceTree = "<group>"; };
 		4A833E602314194100A1BAB6 /* SendDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataDelegate.swift; sourceTree = "<group>"; };
+		4A833E672315775300A1BAB6 /* NewEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmailViewController.swift; sourceTree = "<group>"; };
+		4A833E682315775300A1BAB6 /* NewEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewEmailViewController.xib; sourceTree = "<group>"; };
+		4A833E6B23157B0700A1BAB6 /* NewPwViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPwViewController.swift; sourceTree = "<group>"; };
+		4A833E6C23157B0700A1BAB6 /* NewPwViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPwViewController.xib; sourceTree = "<group>"; };
+		4A833E6F23157BE800A1BAB6 /* NewPersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPersonalViewController.swift; sourceTree = "<group>"; };
+		4A833E7023157BE800A1BAB6 /* NewPersonalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPersonalViewController.xib; sourceTree = "<group>"; };
+		4A833E7423158B7400A1BAB6 /* SchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
+		4A833E7523158B7400A1BAB6 /* SchoolViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolViewController.xib; sourceTree = "<group>"; };
 		4ABFDE2E2313E0D4005BD649 /* newUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = newUser.storyboard; sourceTree = "<group>"; };
 		4ABFDE302313E16E005BD649 /* newUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newUserViewController.swift; sourceTree = "<group>"; };
-		4ABFDE38231403A6005BD649 /* emailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emailViewController.swift; sourceTree = "<group>"; };
-		4ABFDE3A23140478005BD649 /* pwViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pwViewController.swift; sourceTree = "<group>"; };
-		4ABFDE3C23140492005BD649 /* personalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalViewController.swift; sourceTree = "<group>"; };
 		4B15649EA5527554E9DB2BD9 /* Pods_HereThere2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HereThere2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B72862D81618C34A279666E /* Pods-HereThere2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereThere2.debug.xcconfig"; path = "Target Support Files/Pods-HereThere2/Pods-HereThere2.debug.xcconfig"; sourceTree = "<group>"; };
 		D0C82A139445F53091212FF4 /* Pods-HereThere2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereThere2.release.xcconfig"; path = "Target Support Files/Pods-HereThere2/Pods-HereThere2.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +131,7 @@
 		4A3BA56E2312DFE300235F33 /* HereThere2 */ = {
 			isa = PBXGroup;
 			children = (
+				4A833E662315773A00A1BAB6 /* CreateNewUser */,
 				4ABFDE2D2313E0AB005BD649 /* newUser */,
 				4A3BA5BC2312F9ED00235F33 /* createUser */,
 				4A3BA5B72312F02A00235F33 /* LoginPage */,
@@ -216,14 +235,30 @@
 			path = createUser;
 			sourceTree = "<group>";
 		};
+		4A833E662315773A00A1BAB6 /* CreateNewUser */ = {
+			isa = PBXGroup;
+			children = (
+				4A833E7423158B7400A1BAB6 /* SchoolViewController.swift */,
+				4A833E7523158B7400A1BAB6 /* SchoolViewController.xib */,
+				4A833E672315775300A1BAB6 /* NewEmailViewController.swift */,
+				4A833E682315775300A1BAB6 /* NewEmailViewController.xib */,
+				4A833E6B23157B0700A1BAB6 /* NewPwViewController.swift */,
+				4A833E6C23157B0700A1BAB6 /* NewPwViewController.xib */,
+				4A833E6F23157BE800A1BAB6 /* NewPersonalViewController.swift */,
+				4A833E7023157BE800A1BAB6 /* NewPersonalViewController.xib */,
+				4A771C2E23159E38003AD399 /* SchoolOkViewController.swift */,
+				4A771C2F23159E38003AD399 /* SchoolOkViewController.xib */,
+				4A771C3223159E53003AD399 /* SNationViewController.swift */,
+				4A771C3323159E53003AD399 /* SNationViewController.xib */,
+			);
+			path = CreateNewUser;
+			sourceTree = "<group>";
+		};
 		4ABFDE2D2313E0AB005BD649 /* newUser */ = {
 			isa = PBXGroup;
 			children = (
 				4ABFDE2E2313E0D4005BD649 /* newUser.storyboard */,
 				4ABFDE302313E16E005BD649 /* newUserViewController.swift */,
-				4ABFDE38231403A6005BD649 /* emailViewController.swift */,
-				4ABFDE3A23140478005BD649 /* pwViewController.swift */,
-				4ABFDE3C23140492005BD649 /* personalViewController.swift */,
 				4A833E602314194100A1BAB6 /* SendDataDelegate.swift */,
 			);
 			path = newUser;
@@ -308,11 +343,17 @@
 			files = (
 				4A3BA59A2312E55E00235F33 /* MainViewController.xib in Resources */,
 				4A3BA58F2312E4E400235F33 /* SplashViewController.xib in Resources */,
+				4A833E6A2315775300A1BAB6 /* NewEmailViewController.xib in Resources */,
+				4A833E7223157BE800A1BAB6 /* NewPersonalViewController.xib in Resources */,
 				4A3BA57D2312DFE500235F33 /* LaunchScreen.storyboard in Resources */,
+				4A771C3523159E53003AD399 /* SNationViewController.xib in Resources */,
 				4A3BA57A2312DFE500235F33 /* Assets.xcassets in Resources */,
+				4A771C3123159E38003AD399 /* SchoolOkViewController.xib in Resources */,
 				4A3BA5A22312E65900235F33 /* NoticePopUp.storyboard in Resources */,
 				4ABFDE2F2313E0D4005BD649 /* newUser.storyboard in Resources */,
+				4A833E7723158B7400A1BAB6 /* SchoolViewController.xib in Resources */,
 				4A3BA5BB2312F04300235F33 /* LoginViewController.xib in Resources */,
+				4A833E6E23157B0700A1BAB6 /* NewPwViewController.xib in Resources */,
 				4A3BA5B62312EE8000235F33 /* GoogleService-Info.plist in Resources */,
 				4A3BA5C02312FA0D00235F33 /* createUserViewController.xib in Resources */,
 			);
@@ -368,25 +409,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A3BA5B02312E78A00235F33 /* UIViewController.swift in Sources */,
+				4A833E7623158B7400A1BAB6 /* SchoolViewController.swift in Sources */,
 				4A3BA58E2312E4E400235F33 /* SplashViewController.swift in Sources */,
 				4A3BA5AE2312E77500235F33 /* UIButton.swift in Sources */,
-				4ABFDE3B23140478005BD649 /* pwViewController.swift in Sources */,
 				4A833E612314194100A1BAB6 /* SendDataDelegate.swift in Sources */,
-				4ABFDE39231403A6005BD649 /* emailViewController.swift in Sources */,
-				4ABFDE3D23140492005BD649 /* personalViewController.swift in Sources */,
+				4A833E6D23157B0700A1BAB6 /* NewPwViewController.swift in Sources */,
+				4A833E692315775300A1BAB6 /* NewEmailViewController.swift in Sources */,
 				4A3BA5AC2312E76300235F33 /* UIColor.swift in Sources */,
 				4A3BA5782312DFE300235F33 /* HereThere2.xcdatamodeld in Sources */,
 				4A3BA5BF2312FA0D00235F33 /* createUserViewController.swift in Sources */,
 				4A3BA59C2312E5F400235F33 /* TutorialResponse.swift in Sources */,
 				4A3BA5702312DFE300235F33 /* AppDelegate.swift in Sources */,
 				4A3BA5A62312E6FE00235F33 /* BaseViewController.swift in Sources */,
+				4A771C3423159E53003AD399 /* SNationViewController.swift in Sources */,
 				4A3BA5A02312E64000235F33 /* NoticePopUpDelegate.swift in Sources */,
 				4ABFDE312313E16E005BD649 /* newUserViewController.swift in Sources */,
 				4A3BA5B42312E8C100235F33 /* MainDataManager.swift in Sources */,
+				4A771C3023159E38003AD399 /* SchoolOkViewController.swift in Sources */,
 				4A3BA5A82312E72E00235F33 /* CustomIndicatorView.swift in Sources */,
 				4A3BA59E2312E62500235F33 /* NoticePopUp.swift in Sources */,
 				4A3BA5BA2312F04300235F33 /* LoginViewController.swift in Sources */,
 				4A3BA5B22312E7A300235F33 /* String.swift in Sources */,
+				4A833E7123157BE800A1BAB6 /* NewPersonalViewController.swift in Sources */,
 				4A3BA5992312E55E00235F33 /* MainViewController.swift in Sources */,
 				4A3BA5AA2312E74700235F33 /* ColorPalette.swift in Sources */,
 			);
