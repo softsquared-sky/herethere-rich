@@ -44,6 +44,7 @@ class LoginViewController: BaseViewController {
     @IBAction func newCustomer(_ sender: Any) {
         //self.navigationController!.pushViewController(createUserViewController(), animated: true)
         self.navigationController!.pushViewController(NewEmailViewController(), animated: true)
+        //self.navigationController!.pushViewController(SNationViewController(), animated: true)
         
     }
     @IBAction func logoutbtnPushed(_ sender: Any) {

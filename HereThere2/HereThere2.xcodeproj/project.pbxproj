@@ -36,6 +36,10 @@
 		4A771C3123159E38003AD399 /* SchoolOkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A771C2F23159E38003AD399 /* SchoolOkViewController.xib */; };
 		4A771C3423159E53003AD399 /* SNationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A771C3223159E53003AD399 /* SNationViewController.swift */; };
 		4A771C3523159E53003AD399 /* SNationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A771C3323159E53003AD399 /* SNationViewController.xib */; };
+		4A771C382316FBAA003AD399 /* NationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A771C362316FBAA003AD399 /* NationTableViewCell.swift */; };
+		4A771C392316FBAA003AD399 /* NationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A771C372316FBAA003AD399 /* NationTableViewCell.xib */; };
+		4A771C4223173D8D003AD399 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A771C4023173D8D003AD399 /* FinishViewController.swift */; };
+		4A771C4323173D8D003AD399 /* FinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A771C4123173D8D003AD399 /* FinishViewController.xib */; };
 		4A833E612314194100A1BAB6 /* SendDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A833E602314194100A1BAB6 /* SendDataDelegate.swift */; };
 		4A833E692315775300A1BAB6 /* NewEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A833E672315775300A1BAB6 /* NewEmailViewController.swift */; };
 		4A833E6A2315775300A1BAB6 /* NewEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A833E682315775300A1BAB6 /* NewEmailViewController.xib */; };
@@ -82,6 +86,10 @@
 		4A771C2F23159E38003AD399 /* SchoolOkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolOkViewController.xib; sourceTree = "<group>"; };
 		4A771C3223159E53003AD399 /* SNationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNationViewController.swift; sourceTree = "<group>"; };
 		4A771C3323159E53003AD399 /* SNationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SNationViewController.xib; sourceTree = "<group>"; };
+		4A771C362316FBAA003AD399 /* NationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationTableViewCell.swift; sourceTree = "<group>"; };
+		4A771C372316FBAA003AD399 /* NationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NationTableViewCell.xib; sourceTree = "<group>"; };
+		4A771C4023173D8D003AD399 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		4A771C4123173D8D003AD399 /* FinishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishViewController.xib; sourceTree = "<group>"; };
 		4A833E602314194100A1BAB6 /* SendDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataDelegate.swift; sourceTree = "<group>"; };
 		4A833E672315775300A1BAB6 /* NewEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmailViewController.swift; sourceTree = "<group>"; };
 		4A833E682315775300A1BAB6 /* NewEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewEmailViewController.xib; sourceTree = "<group>"; };
@@ -250,6 +258,10 @@
 				4A771C2F23159E38003AD399 /* SchoolOkViewController.xib */,
 				4A771C3223159E53003AD399 /* SNationViewController.swift */,
 				4A771C3323159E53003AD399 /* SNationViewController.xib */,
+				4A771C362316FBAA003AD399 /* NationTableViewCell.swift */,
+				4A771C372316FBAA003AD399 /* NationTableViewCell.xib */,
+				4A771C4023173D8D003AD399 /* FinishViewController.swift */,
+				4A771C4123173D8D003AD399 /* FinishViewController.xib */,
 			);
 			path = CreateNewUser;
 			sourceTree = "<group>";
@@ -345,10 +357,12 @@
 				4A3BA58F2312E4E400235F33 /* SplashViewController.xib in Resources */,
 				4A833E6A2315775300A1BAB6 /* NewEmailViewController.xib in Resources */,
 				4A833E7223157BE800A1BAB6 /* NewPersonalViewController.xib in Resources */,
+				4A771C392316FBAA003AD399 /* NationTableViewCell.xib in Resources */,
 				4A3BA57D2312DFE500235F33 /* LaunchScreen.storyboard in Resources */,
 				4A771C3523159E53003AD399 /* SNationViewController.xib in Resources */,
 				4A3BA57A2312DFE500235F33 /* Assets.xcassets in Resources */,
 				4A771C3123159E38003AD399 /* SchoolOkViewController.xib in Resources */,
+				4A771C4323173D8D003AD399 /* FinishViewController.xib in Resources */,
 				4A3BA5A22312E65900235F33 /* NoticePopUp.storyboard in Resources */,
 				4ABFDE2F2313E0D4005BD649 /* newUser.storyboard in Resources */,
 				4A833E7723158B7400A1BAB6 /* SchoolViewController.xib in Resources */,
@@ -419,11 +433,13 @@
 				4A3BA5782312DFE300235F33 /* HereThere2.xcdatamodeld in Sources */,
 				4A3BA5BF2312FA0D00235F33 /* createUserViewController.swift in Sources */,
 				4A3BA59C2312E5F400235F33 /* TutorialResponse.swift in Sources */,
+				4A771C4223173D8D003AD399 /* FinishViewController.swift in Sources */,
 				4A3BA5702312DFE300235F33 /* AppDelegate.swift in Sources */,
 				4A3BA5A62312E6FE00235F33 /* BaseViewController.swift in Sources */,
 				4A771C3423159E53003AD399 /* SNationViewController.swift in Sources */,
 				4A3BA5A02312E64000235F33 /* NoticePopUpDelegate.swift in Sources */,
 				4ABFDE312313E16E005BD649 /* newUserViewController.swift in Sources */,
+				4A771C382316FBAA003AD399 /* NationTableViewCell.swift in Sources */,
 				4A3BA5B42312E8C100235F33 /* MainDataManager.swift in Sources */,
 				4A771C3023159E38003AD399 /* SchoolOkViewController.swift in Sources */,
 				4A3BA5A82312E72E00235F33 /* CustomIndicatorView.swift in Sources */,

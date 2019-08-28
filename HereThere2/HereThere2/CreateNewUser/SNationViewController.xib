@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SNationViewController" customModule="HereThere2" customModuleProvider="target">
             <connections>
+                <outlet property="pick" destination="NMD-fq-Wk0" id="AYb-Iy-yPa"/>
+                <outlet property="pickerbtn" destination="B5q-W9-1wl" id="xRV-LG-FaG"/>
+                <outlet property="pickerdown" destination="1vo-bN-nqS" id="6Es-7r-fPW"/>
+                <outlet property="tableView" destination="Gg2-DA-PPN" id="dXj-x9-tw4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,25 +25,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기본정보입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAc-Aj-fp6">
-                    <rect key="frame" x="24" y="128" width="73" height="17"/>
+                    <rect key="frame" x="24" y="74" width="73" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.44529226960000001" green="0.73206573630000005" blue="0.95752696699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학교인증" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcA-Cm-m7y">
-                    <rect key="frame" x="109" y="128" width="48.5" height="17"/>
+                    <rect key="frame" x="109" y="74" width="49" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.44529226960000001" green="0.73206573630000005" blue="0.95752696699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관심지역선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep4-SP-XRU">
-                    <rect key="frame" x="169.5" y="128" width="73" height="17"/>
+                    <rect key="frame" x="170" y="74" width="73" height="17"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관심지역을 선택해주세요." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0o-dV-jmc">
-                    <rect key="frame" x="24" y="205" width="184" height="78"/>
+                    <rect key="frame" x="24" y="151" width="184" height="78"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="78" id="XO4-sh-Du8"/>
                         <constraint firstAttribute="width" constant="184" id="cJv-rF-Xk8"/>
@@ -49,7 +53,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="교환학생으로 가고 싶은 곳, 친구가 교환학생으로 간 곳 등 관심지역을 선택하면 해당 지역의 소식을 볼 수 있습니다." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mz-78-9F2">
-                    <rect key="frame" x="24" y="299" width="278" height="36"/>
+                    <rect key="frame" x="24" y="245" width="278" height="36"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="278" id="HGN-cc-viB"/>
                         <constraint firstAttribute="height" constant="36" id="nPR-HS-cao"/>
@@ -58,41 +62,66 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrR-y2-6IH">
-                    <rect key="frame" x="24" y="381" width="290" height="40"/>
-                    <state key="normal" image="ic_picker"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMD-fq-Wk0">
+                    <rect key="frame" x="30" y="403" width="140" height="48"/>
+                    <state key="normal" image="ic_nonpick"/>
                     <connections>
-                        <action selector="pickerBtn:" destination="-1" eventType="touchUpInside" id="tSj-u1-FV3"/>
+                        <action selector="pickpressed:" destination="-1" eventType="touchUpInside" id="nif-Cf-cQe"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMD-fq-Wk0">
-                    <rect key="frame" x="30" y="457" width="140" height="48"/>
-                    <state key="normal" image="ic_nonpick"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gg2-DA-PPN">
+                    <rect key="frame" x="24" y="466" width="300" height="336"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5q-W9-1wl">
+                    <rect key="frame" x="24" y="327" width="290" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="44i-rC-zsA"/>
+                        <constraint firstAttribute="width" constant="290" id="wqa-Dl-pSC"/>
+                    </constraints>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="150" maxY="0.0"/>
+                    <state key="normal" title="관심지역 선택하기">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="pickerBtnC:" destination="-1" eventType="touchUpInside" id="GKq-mO-8HC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vo-bN-nqS">
+                    <rect key="frame" x="290" y="336" width="16" height="22"/>
+                    <state key="normal" image="ic_down"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.27552406219999998" green="0.62419008190000003" blue="0.95752696699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="1mz-78-9F2" firstAttribute="top" secondItem="G0o-dV-jmc" secondAttribute="bottom" constant="16" id="18Q-OY-rXF"/>
+                <constraint firstItem="NMD-fq-Wk0" firstAttribute="top" secondItem="B5q-W9-1wl" secondAttribute="bottom" constant="36" id="1UF-9f-FiS"/>
                 <constraint firstItem="1mz-78-9F2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="2pT-ql-bgd"/>
+                <constraint firstItem="1vo-bN-nqS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="290" id="El2-DT-K1z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gg2-DA-PPN" secondAttribute="bottom" constant="60" id="Ezb-g5-Qt3"/>
                 <constraint firstItem="NMD-fq-Wk0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Gsp-ix-ief"/>
-                <constraint firstItem="sAc-Aj-fp6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="84" id="Kur-oQ-GUw"/>
-                <constraint firstItem="NMD-fq-Wk0" firstAttribute="top" secondItem="HrR-y2-6IH" secondAttribute="bottom" constant="36" id="NK8-c6-ZSj"/>
+                <constraint firstItem="sAc-Aj-fp6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="Kur-oQ-GUw"/>
                 <constraint firstItem="G0o-dV-jmc" firstAttribute="top" secondItem="sAc-Aj-fp6" secondAttribute="bottom" constant="60" id="Ta1-8N-MNS"/>
-                <constraint firstItem="jcA-Cm-m7y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="84" id="cKy-R0-al4"/>
+                <constraint firstItem="1vo-bN-nqS" firstAttribute="top" secondItem="1mz-78-9F2" secondAttribute="bottom" constant="55" id="aTr-tz-LSW"/>
+                <constraint firstItem="jcA-Cm-m7y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="cKy-R0-al4"/>
+                <constraint firstItem="B5q-W9-1wl" firstAttribute="top" secondItem="1mz-78-9F2" secondAttribute="bottom" constant="46" id="eln-te-6gP"/>
                 <constraint firstItem="Ep4-SP-XRU" firstAttribute="leading" secondItem="jcA-Cm-m7y" secondAttribute="trailing" constant="12" id="feO-NZ-bHJ"/>
-                <constraint firstItem="HrR-y2-6IH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="gDW-qj-To3"/>
-                <constraint firstItem="Ep4-SP-XRU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="84" id="k3m-Rm-JUS"/>
+                <constraint firstItem="Gg2-DA-PPN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="hjS-4A-Hl1"/>
+                <constraint firstItem="Ep4-SP-XRU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="k3m-Rm-JUS"/>
+                <constraint firstItem="Gg2-DA-PPN" firstAttribute="top" secondItem="NMD-fq-Wk0" secondAttribute="bottom" constant="15" id="kkN-CH-L67"/>
+                <constraint firstItem="B5q-W9-1wl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="kmG-no-nVi"/>
                 <constraint firstItem="jcA-Cm-m7y" firstAttribute="leading" secondItem="sAc-Aj-fp6" secondAttribute="trailing" constant="12" id="ksh-R6-DyQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gg2-DA-PPN" secondAttribute="trailing" constant="90" id="mJs-Dl-q2O"/>
                 <constraint firstItem="sAc-Aj-fp6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="o0p-TL-3ot"/>
                 <constraint firstItem="G0o-dV-jmc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="pn4-oK-QSj"/>
-                <constraint firstItem="HrR-y2-6IH" firstAttribute="top" secondItem="1mz-78-9F2" secondAttribute="bottom" constant="46" id="yfB-R9-Fah"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="50.724637681159422" y="81.696428571428569"/>
         </view>
     </objects>
     <resources>
+        <image name="ic_down" width="16" height="16"/>
         <image name="ic_nonpick" width="140" height="48"/>
-        <image name="ic_picker" width="290" height="40"/>
     </resources>
 </document>
