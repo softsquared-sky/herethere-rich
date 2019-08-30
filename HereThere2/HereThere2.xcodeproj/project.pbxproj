@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A01462D231925DA0001D5F7 /* HampageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A01462C231925DA0001D5F7 /* HampageViewController.swift */; };
+		4A0146302319663E0001D5F7 /* HamMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A01462E2319663E0001D5F7 /* HamMenuViewController.swift */; };
+		4A0146312319663E0001D5F7 /* HamMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A01462F2319663E0001D5F7 /* HamMenuViewController.xib */; };
 		4A3BA5702312DFE300235F33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BA56F2312DFE300235F33 /* AppDelegate.swift */; };
 		4A3BA5782312DFE300235F33 /* HereThere2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BA5762312DFE300235F33 /* HereThere2.xcdatamodeld */; };
 		4A3BA57A2312DFE500235F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3BA5792312DFE500235F33 /* Assets.xcassets */; };
@@ -55,6 +58,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A01462C231925DA0001D5F7 /* HampageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HampageViewController.swift; sourceTree = "<group>"; };
+		4A01462E2319663E0001D5F7 /* HamMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamMenuViewController.swift; sourceTree = "<group>"; };
+		4A01462F2319663E0001D5F7 /* HamMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HamMenuViewController.xib; sourceTree = "<group>"; };
 		4A3BA56C2312DFE300235F33 /* HereThere2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereThere2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3BA56F2312DFE300235F33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A3BA5772312DFE300235F33 /* HereThere2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HereThere2.xcdatamodel; sourceTree = "<group>"; };
@@ -118,6 +124,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A014621231911050001D5F7 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				4A01462C231925DA0001D5F7 /* HampageViewController.swift */,
+				4A01462E2319663E0001D5F7 /* HamMenuViewController.swift */,
+				4A01462F2319663E0001D5F7 /* HamMenuViewController.xib */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
 		4A3BA5632312DFE300235F33 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +155,7 @@
 		4A3BA56E2312DFE300235F33 /* HereThere2 */ = {
 			isa = PBXGroup;
 			children = (
+				4A014621231911050001D5F7 /* MainPage */,
 				4A833E662315773A00A1BAB6 /* CreateNewUser */,
 				4ABFDE2D2313E0AB005BD649 /* newUser */,
 				4A3BA5BC2312F9ED00235F33 /* createUser */,
@@ -355,6 +372,7 @@
 			files = (
 				4A3BA59A2312E55E00235F33 /* MainViewController.xib in Resources */,
 				4A3BA58F2312E4E400235F33 /* SplashViewController.xib in Resources */,
+				4A0146312319663E0001D5F7 /* HamMenuViewController.xib in Resources */,
 				4A833E6A2315775300A1BAB6 /* NewEmailViewController.xib in Resources */,
 				4A833E7223157BE800A1BAB6 /* NewPersonalViewController.xib in Resources */,
 				4A771C392316FBAA003AD399 /* NationTableViewCell.xib in Resources */,
@@ -431,6 +449,7 @@
 				4A833E692315775300A1BAB6 /* NewEmailViewController.swift in Sources */,
 				4A3BA5AC2312E76300235F33 /* UIColor.swift in Sources */,
 				4A3BA5782312DFE300235F33 /* HereThere2.xcdatamodeld in Sources */,
+				4A01462D231925DA0001D5F7 /* HampageViewController.swift in Sources */,
 				4A3BA5BF2312FA0D00235F33 /* createUserViewController.swift in Sources */,
 				4A3BA59C2312E5F400235F33 /* TutorialResponse.swift in Sources */,
 				4A771C4223173D8D003AD399 /* FinishViewController.swift in Sources */,
@@ -448,6 +467,7 @@
 				4A3BA5B22312E7A300235F33 /* String.swift in Sources */,
 				4A833E7123157BE800A1BAB6 /* NewPersonalViewController.swift in Sources */,
 				4A3BA5992312E55E00235F33 /* MainViewController.swift in Sources */,
+				4A0146302319663E0001D5F7 /* HamMenuViewController.swift in Sources */,
 				4A3BA5AA2312E74700235F33 /* ColorPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

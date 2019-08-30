@@ -42,9 +42,16 @@ class LoginViewController: BaseViewController {
         }
     }
     @IBAction func newCustomer(_ sender: Any) {
-        //self.navigationController!.pushViewController(createUserViewController(), animated: true)
-        self.navigationController!.pushViewController(NewEmailViewController(), animated: true)
-        //self.navigationController!.pushViewController(SNationViewController(), animated: true)
+       self.navigationController!.pushViewController(HamMenuViewController(), animated: true) //self.navigationController!.pushViewController(createUserViewController(), animated: true)
+        //self.navigationController!.pushViewController(NewEmailViewController(), animated: true)
+        //self.navigationController!.pushViewController(MainpageViewController(), animated: true)
+        /*let hamStoryboard = UIStoryboard(name: "MainPage", bundle: Bundle.main)
+        guard let hammenu = hamStoryboard.instantiateViewController(withIdentifier: "hampage") as? HampageViewController else {
+            return
+        }
+        
+        hammenu.modalPresentationStyle = .custom
+        self.present(hammenu, animated: true, completion: nil)*/
         
     }
     @IBAction func logoutbtnPushed(_ sender: Any) {

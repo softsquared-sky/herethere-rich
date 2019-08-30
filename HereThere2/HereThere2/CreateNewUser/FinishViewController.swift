@@ -10,6 +10,17 @@ import UIKit
 
 class FinishViewController: BaseViewController {
 
+    @IBAction func btnPressed(_ sender: Any) {
+        //self.navigationController!.pushViewController(MainpageViewController(), animated: true)
+        let hamStoryboard = UIStoryboard(name: "MainPage", bundle: Bundle.main)
+        guard let hammenu = hamStoryboard.instantiateViewController(withIdentifier: "hampage") as? HampageViewController else {
+            return
+        }
+        
+        hammenu.modalPresentationStyle = .custom
+        self.present(hammenu, animated: true, completion: nil)
+        }
+    
     lazy var rightButton: UIBarButtonItem = { let button = UIBarButtonItem(title: "건너뛰기", style: .plain, target: self, action: #selector(buttonPressed(_:)))
         button.tag = 1
         return button
@@ -36,16 +47,4 @@ class FinishViewController: BaseViewController {
         view.backgroundColor = testColor
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
