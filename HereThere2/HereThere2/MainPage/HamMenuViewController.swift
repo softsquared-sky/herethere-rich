@@ -10,14 +10,21 @@ import UIKit
 
 class HamMenuViewController: BaseViewController {
     var ishidden = false
-    @IBOutlet weak var TrailingC: NSLayoutConstraint!
-    
-    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var main: UIView!
-    @IBOutlet weak var LeadingC: NSLayoutConstraint!
-
-    @IBOutlet weak var hamTrailingC: NSLayoutConstraint!
-    @IBOutlet weak var hamLeadingC: NSLayoutConstraint!
+    @IBOutlet weak var hamTrailingC: NSLayoutConstraint!{
+        didSet{
+            hamTrailingC.constant = 410
+        }
+    }
+    @IBOutlet weak var hamLeadingC: NSLayoutConstraint!{
+        didSet{
+            hamLeadingC.constant = 0
+        }
+    }
+    
+    @IBAction func logoutbtn(_ sender: Any) {
+        self.navigationController!.pushViewController(LogoutViewController(), animated: true)
+    }
     let imgIcon = UIImage(named: "ic_hammenu")?.withRenderingMode(.alwaysOriginal)
 
     @IBAction func dismissbtn(_ sender: Any) {
@@ -31,12 +38,6 @@ class HamMenuViewController: BaseViewController {
         }
         main.backgroundColor =
             UIColor.white
-        //hamview.isHidden = true
-    }
-    @IBOutlet weak var hamview: UIView!{
-        didSet{
-            //hamview.isHidden = true
-        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,6 @@ class HamMenuViewController: BaseViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         view.backgroundColor = UIColor.white
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: imgIcon, style: .plain, target: self, action: #selector(menuBtnTapped))
-        // Do any additional setup after loading the view.
     }
     
     @objc func menuBtnTapped() {

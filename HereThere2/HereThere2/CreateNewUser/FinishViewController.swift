@@ -12,14 +12,17 @@ class FinishViewController: BaseViewController {
 
     @IBAction func btnPressed(_ sender: Any) {
         //self.navigationController!.pushViewController(MainpageViewController(), animated: true)
-        let hamStoryboard = UIStoryboard(name: "MainPage", bundle: Bundle.main)
+        /*let hamStoryboard = UIStoryboard(name: "MainPage", bundle: Bundle.main)
         guard let hammenu = hamStoryboard.instantiateViewController(withIdentifier: "hampage") as? HampageViewController else {
             return
         }
         
         hammenu.modalPresentationStyle = .custom
         self.present(hammenu, animated: true, completion: nil)
-        }
+        }*/
+        
+        self.navigationController!.pushViewController(HamMenuViewController(), animated: true)
+    }
     
     lazy var rightButton: UIBarButtonItem = { let button = UIBarButtonItem(title: "건너뛰기", style: .plain, target: self, action: #selector(buttonPressed(_:)))
         button.tag = 1
@@ -29,7 +32,7 @@ class FinishViewController: BaseViewController {
     @objc private func buttonPressed(_ sender: Any) { if let button = sender as? UIBarButtonItem {
         switch button.tag {
         case 1: // Change the background color to blue.
-            self.navigationController!.pushViewController(SNationViewController(), animated: true)
+            self.navigationController!.pushViewController(HamMenuViewController(), animated: true)
         default:
             break
         }

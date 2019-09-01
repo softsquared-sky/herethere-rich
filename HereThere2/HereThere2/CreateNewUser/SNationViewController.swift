@@ -91,7 +91,7 @@ class SNationViewController: BaseViewController, UITableViewDataSource {
     @objc private func buttonPressed(_ sender: Any) { if let button = sender as? UIBarButtonItem {
         switch button.tag {
         case 1: // Change the background color to blue.
-            self.navigationController!.pushViewController(SNationViewController(), animated: true)
+            self.navigationController!.pushViewController(HamMenuViewController(), animated: true)
         default:
             break
         }

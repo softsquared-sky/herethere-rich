@@ -12,12 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HamMenuViewController" customModule="HereThere2" customModuleProvider="target">
             <connections>
-                <outlet property="LeadingC" destination="nFU-XE-fE8" id="xlG-fQ-KjC"/>
-                <outlet property="TrailingC" destination="wdj-Yx-izj" id="RhV-P7-seD"/>
                 <outlet property="hamLeadingC" destination="ZBb-OJ-LIk" id="1YA-Yn-ctQ"/>
                 <outlet property="hamTrailingC" destination="MUT-Jp-Skr" id="fiY-n5-L5h"/>
-                <outlet property="hamview" destination="fEe-mU-TQo" id="CWv-uk-Jd4"/>
-                <outlet property="label" destination="rhY-t5-qvu" id="wEQ-qn-hEg"/>
                 <outlet property="main" destination="jQo-QL-ewI" id="DhT-IO-5sL"/>
                 <outlet property="view" destination="je3-Nd-kDA" id="gKY-IN-edZ"/>
             </connections>
@@ -29,15 +25,6 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQo-QL-ewI">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dnddkdnsnflkansdlfnasldfknalsdnkflaskndflaksndflaksnflkandlfnds" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhY-t5-qvu">
-                            <rect key="frame" x="73" y="341" width="307" height="281"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEe-mU-TQo">
@@ -53,6 +40,9 @@
                             <state key="normal" title="로그아웃">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="logoutbtn:" destination="-1" eventType="touchUpInside" id="CXr-MU-76q"/>
+                            </connections>
                         </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_profile" translatesAutoresizingMaskIntoConstraints="NO" id="7Hb-Ci-Dsy">
                             <rect key="frame" x="20" y="40" width="64" height="64"/>

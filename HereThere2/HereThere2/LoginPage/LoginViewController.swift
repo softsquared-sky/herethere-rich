@@ -42,7 +42,7 @@ class LoginViewController: BaseViewController {
         }
     }
     @IBAction func newCustomer(_ sender: Any) {
-       self.navigationController!.pushViewController(HamMenuViewController(), animated: true) //self.navigationController!.pushViewController(createUserViewController(), animated: true)
+       //self.navigationController!.pushViewController(HamMenuViewController(), animated: true) //self.navigationController!.pushViewController(createUserViewController(), animated: true)
         //self.navigationController!.pushViewController(NewEmailViewController(), animated: true)
         //self.navigationController!.pushViewController(MainpageViewController(), animated: true)
         /*let hamStoryboard = UIStoryboard(name: "MainPage", bundle: Bundle.main)
@@ -51,9 +51,26 @@ class LoginViewController: BaseViewController {
         }
         
         hammenu.modalPresentationStyle = .custom
-        self.present(hammenu, animated: true, completion: nil)*/
+        self.present(hammenu, animated: true, completion: nil)
+         
+         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+         let viewController = mainStoryboard.instantiateViewController(withIdentifier: "Mainhome")
+         self.navigationController?.pushViewController(viewController, animated: true)
+         //self.window?.rootViewController = viewController
+         */
+        
+        let hamStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let uvc = hamStoryboard.instantiateViewController(withIdentifier: "homeview") as? HomeViewController else { return }
+        // 화면을 전환할 때 애니메이션 정의
+        
+        uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        
+        // 화면을 전환한다
+        self.navigationController?.pushViewController(uvc, animated: true)
+        
         
     }
+    
     @IBAction func logoutbtnPushed(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {
