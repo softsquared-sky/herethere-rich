@@ -17,9 +17,20 @@ class MainDataManager : BaseViewController{
     var nickName: String?
     var name: String?
     var birth: Int?
+    var newPass2 : String?
+    var nation = [Int]()
     
+    func postnation(_ snationViewController: SNationViewController){
+        for i in 0..<snationViewController.empty.count{
+            if snationViewController.empty[i] == 1{
+                nation.append(i+1)
+            }
+        }
+        print(nation)
+    }
     func getpass(_ newpwViewController: NewPwViewController){
         newPass = newpwViewController.firstTxtField.text!
+        newPass2 = newpwViewController.secondTxtField.text!
     }
     
     func getLogin(_ loginViewController: LoginViewController, _ parameter: [String: String]){
@@ -79,7 +90,7 @@ class MainDataManager : BaseViewController{
                 print(response)
                 break
             case .failure:
-                self.newPass = newpersonalViewController.nickTxt.text!
+                self.nickName = newpersonalViewController.nickTxt.text!
                 self.birth = Int(newpersonalViewController.birthTxt.text!)
                 self.name = newpersonalViewController.realnameTxt.text!
                 newpersonalViewController.navigationController!.pushViewController(SchoolViewController(), animated: true)
@@ -87,25 +98,9 @@ class MainDataManager : BaseViewController{
         })
     }
 
-    func getNations(_ snationViewController: SNationViewController) {
-        Alamofire.request("\(self.appDelegate.baseUrl)/location", method: .get).validate().responseObject(completionHandler: { (response: DataResponse<NationResponse>) in
-                switch response.result {
-                    
-                case .success(let NationResponse):
-                    print(response.result)
-                    print(response)
-                    if NationResponse.code == 100 {
-                        let Nations = NationResponse.nations
-                        
-                        //snationViewController.arr2.append(Nations.location)
-                    } else {
-                        //snationViewController.titleLabel.text = "튜토리얼 정보를 불러오는데 실패하였습니다."
-                    }
-                case .failure:
-                    snationViewController.presentAlert(title: "", message: "서버와의 연결이 원활하지 않습니다.")
-                }
-            })
-    }
+    
+    
+    
     
 
     func getTutorials(_ mainViewController: MainViewController) {        

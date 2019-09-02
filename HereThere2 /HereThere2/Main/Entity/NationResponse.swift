@@ -13,7 +13,9 @@ struct NationResponse {
     var message: String!
     var isSuccess: Bool!
     var code: Int!
-    var nations: [String]!
+    var nations: [Nation]!
+    //var locationNo: Int!
+    //var location: String!
 }
 
 extension NationResponse: Mappable {
@@ -26,6 +28,8 @@ extension NationResponse: Mappable {
         code <- map["code"]
         message <- map["message"]
         nations <- map["result"]
+        //location <- map["result.location"]
+        //locationNo <- map["result.locationNo"]
         //tutorials <- map["result"]
     }
     

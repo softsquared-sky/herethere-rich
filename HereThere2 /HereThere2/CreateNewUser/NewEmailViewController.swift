@@ -73,7 +73,7 @@ extension NewEmailViewController: UITextFieldDelegate{
             //okBtn.setImage(loginnotOk, for: UIControl.State.normal)
             unvalidLabel.isHidden = false
         }
-        print(emailTextField.text!,range.location, range.length)
+        print(emailTextField.text!, range.location, range.length)
         return true
     }
 }

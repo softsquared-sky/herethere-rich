@@ -15,7 +15,7 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
+    //var arr2 = [String]()
     // Production 서버
     //    let baseUrl = "https://beluv.softsquared.com"
     // Dev 서버
