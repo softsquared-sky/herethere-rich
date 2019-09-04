@@ -1,0 +1,6 @@
+framework module Pods_HereThere2 {
+  umbrella header "Pods-HereThere2-umbrella.h"
+
+  export *
+  module * { export * }
+}
